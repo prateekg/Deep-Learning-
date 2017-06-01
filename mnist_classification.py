@@ -39,6 +39,8 @@ model.fit(X_train, Y_train, batch_size=32, nb_epoch=10, verbose=1)
 
 score = model.evaluate(X_test, Y_Test, verbose=0)
 
+print "Loss is %f, accuracy is %f", score[0], score[1]
+
 values = model.predict(X_test, verbose=0) #this values[0] is 10 feature value with float value for each from 0-9
 Y_test = list(Y_test)
 
