@@ -15,8 +15,8 @@ X_test = X_test.reshape(X_test.shape[0], 1, 28, 28)
 X_train = X_train.astype('float32')
 X_test = X_test.astype('float32')
 
-X_train \= 255
-X_test \= 255
+X_train /= 255
+X_test /= 255
 
 Y_train = np_utils.to_categorical(y_train, 10)
 Y_test = np_utils.to_categorical(y_test, 10)
